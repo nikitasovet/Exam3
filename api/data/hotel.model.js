@@ -42,4 +42,4 @@ var hotelSchema = new mongoose.Schema({
   reviews : [commentaireSchema]
 });
 
-mongoose.model('hotel', hotelSchema);
+mongoose.model('hotel', hotelSchema, 'hotel');
