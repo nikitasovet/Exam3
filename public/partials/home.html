@@ -42,12 +42,14 @@
 
 <br/>
 
+
+
 <div class="container">
   <div class="row">
         <ul>
         <li ng-repeat="hotel in hotels">
         <ul class="puce">
-          <li ng-repeat="review in hotel.reviews"><label for="example-text-input" class="col-2 col-form-label">Nom: </label>{{review.name}} <label for="example-text-input" class="col-2 col-form-label">Note: </label>{{review.rating}} <span class="glyphicon glyphicon-star"></span> <label for="example-text-input" class="col-2 col-form-label">Commentaire: </label>{{review.review}} <label for="example-text-input" class="col-2 col-form-label">Date: </label>{{review.createdOn}}</li>
+          <li ng-repeat="review in hotel.reviews"><label for="example-text-input" class="col-2 col-form-label">Nom: </label>{{review.name}} <label for="example-text-input" class="col-2 col-form-label">Note: </label>{{review.rating}} <span class="glyphicon glyphicon-star"></spa <label for="example-text-input" class="col-2 col-form-label">Commentaire: </label>{{review.review}} <label for="example-text-input" class="col-2 col-form-label">Date: </label>{{review.createdOn}}</li>
         </ul>
       </li>
     </ul>

@@ -18,20 +18,27 @@
 </div>
 
 <br/>
+<div class="container">
   <div class="row">
-  <div class="col-xs-6" ng-repeat="room in hotel.rooms">
+    <div class="col-xs-4" ng-repeat="room in hotel.rooms">
       <ul>
+        <li><img ng-src="{{room.photos[0]}}" alt="" class="img-responsive img-center"/></li>
         <li >{{room.type}}</li>
+        <li> {{room.number}}</li>
+        <li> {{room.description}}</li>
+
       </ul>
       <button type="button" class="btn btn-default pull-left">Réserver</button>
       <button type="button" class="btn btn-default pull-right">Nb de chambre</button>
     </div>
+  </div>
+</div>
 
 
 
 <br/>
 
-  <div class="row">
+  <div class="container">
     <div class="col-lg-6">
       <form class="form-group" name="form" ng-submit="form.$valid && hotelPageCtrl.addOneComment()">
         <label for="example-text-input" class="col-2 col-form-label">Commentaire</label>
@@ -56,9 +63,13 @@
         <input type="submit" value="envoyer" required>
       </form>
     </div>
-    <div class="col-xs-12">
+
+  <div class="col-lg-6" ng-repeat="review in hotel.reviews">
       <ul>
-        <li>{{hotel.reviews}}</li>
+        <li >{{review.name}}</li>
+        <li> {{review.createdOn}}</li>
+        <li> {{review.review}}</li>
+        <li> {{review.rating}}</li>
       </ul>
     </div>
-  </div>
+</div>
