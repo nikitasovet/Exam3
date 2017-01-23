@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <img ng-src="{{hotel.photos[0]}}" alt="" class="img-responsive img-center"/>
+    </div>
+  </div>
+</div>
+
+<br/>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <ul>
+        <li><p>{{hotel.name}}</p>{{hotel.description}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<br/>
+  <div class="row">
+  <div class="col-xs-6" ng-repeat="room in hotel.rooms">
+      <ul>
+        <li >{{room.type}}</li>
+      </ul>
+      <button type="button" class="btn btn-default pull-left">Réserver</button>
+      <button type="button" class="btn btn-default pull-right">Nb de chambre</button>
+    </div>
+
+
+
+<br/>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <form class="form-group" name="form" ng-submit="form.$valid && hotelPageCtrl.addOneComment()">
+        <label for="example-text-input" class="col-2 col-form-label">Commentaire</label>
+        <div class="col-10">
+          <input class="form-control" type="text" value="Artisanal kale" id="example-text-input" ng-model="text" required>
+        </div>
+        <label for="example-text-input" class="col-2 col-form-label">Pseudo</label>
+        <div class="col-10">
+          <input class="form-control" type="text" value="Artisanal kale" id="example-text-input" ng-model="pseudo" required>
+        </div>
+        <label for="example-text-input" class="col-2 col-form-label">Note</label>
+        <div class="col-10">
+          <select class="form-control" id="exampleSelect1" ng-model="note" required>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <br/>
+        <input type="submit" value="envoyer" required>
+      </form>
+    </div>
+    <div class="col-xs-12">
+      <ul>
+        <li>{{hotel.reviews}}</li>
+      </ul>
+    </div>
+  </div>

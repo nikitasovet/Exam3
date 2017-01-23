@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row">
+    <div id="Carousel" class="carousel slide">
+      <ol class="carousel-indicators">
+          <li data-target="Carousel" data-slide-to="0" class="active"></li>
+          <li data-target="Carousel" data-slide-to="1"></li>
+          <li data-target="Carousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+          <div class="item active">
+              <img src="images/hotel/corinthiahotelbudapest/1.jpg" class="img-responsive">
+          </div>
+          <div class="item">
+              <img src="images/hotel/corinthiahotelbudapest/2.jpg" class="img-responsive">
+          </div>
+          <div class="item">
+              <img src="images/hotel/corinthiahotelbudapest/3.jpg" class="img-responsive">
+          </div>
+      </div>
+      <span class="left carousel-control" data-target="#Carousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+      </span>
+      <span class="right carousel-control" data-target="#Carousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+     </span>
+    </div>
+  </div>
+</div>
+
+
+
+<br/>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6" ng-repeat="hotel in hotels">
+      <ul>
+        <li><a href="#/hotel/{{hotel._id}}">{{hotel.name}}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<div class="container">
+  <div class="row">
+        <ul>
+        <li ng-repeat="hotel in hotels">
+        <ul class="puce">
+          <li ng-repeat="review in hotel.reviews"><label for="example-text-input" class="col-2 col-form-label">Nom: </label>{{review.name}} <label for="example-text-input" class="col-2 col-form-label">Note: </label>{{review.rating}} <span class="glyphicon glyphicon-star"></span> <label for="example-text-input" class="col-2 col-form-label">Commentaire: </label>{{review.review}} <label for="example-text-input" class="col-2 col-form-label">Date: </label>{{review.createdOn}}</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

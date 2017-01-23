@@ -1,5 +1,5 @@
 var MongoClient = require('mongodb').MongoClient;
-var url = 'mongodb://zoo:mongoDB@ds133358.mlab.com:33358/socialzoo';
+var url = 'mongodb://nikita:exam3@ds127439.mlab.com:27439/exam3';
 
 var _connection = null;
 
